@@ -1,0 +1,13 @@
+.botoes {
+  text-align: end;
+  margin-top: 16px;
+  align-items: center;
+}
+
+form {
+  padding: 5%;
+}
+
+.input {
+  width: 100%;
+}

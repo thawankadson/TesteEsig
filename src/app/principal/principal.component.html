@@ -1,0 +1,47 @@
+<img src="assets/logoesig.png">
+
+<div class="container">
+  <div class="row justify-content-end">
+
+  </div>
+  <div class="col-md-9">
+    <input type="text" [(ngModel)]="titulo" class="form-control input" />
+  </div>
+  <div class="col-md-3 d-flex gap-2" >
+    <button (click)="buscarCliente()" class="btn btn-primary">pesquisar</button>
+    <button (click)="abreModalFormulario(0, 'cadastrar')" class="btn btn-success">Novo Cliente</button>
+      <!-- <mat-icon>add</mat-icon> -->
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table" *ngIf="tabela">
+        <thead>
+          <tr>
+            <th>Titulo</th>
+            <th>Descrição</th>
+            <th>Responsavel</th>
+            <th>Prioridade</th>
+            <th>data</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let c of clientes" (click)="selecionarCliente(c)">
+            <td>{{c.titulo}}</td>
+            <td>{{c.descricao}}</td>
+            <td>{{c.responsavel}}</td>
+            <td>{{c.prioridade}}</td>
+            <td>{{c.data}}</td>
+            <td>
+              <div class="espaco">
+                <button (click)="abreModalFormulario(c.id, 'atualizar')" style="margin-right: 10px;" class="btn btn-warning">Editar</button>
+                <button (click)="remover(c.id)" class="btn btn-danger">Deletar</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
