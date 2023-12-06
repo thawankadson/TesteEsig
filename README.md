@@ -1,3 +1,18 @@
+##BANCO DE DADOS POSTGRES
+server.port = 8080
+##PostgrSQL
+spring.datasource.url=jdbc:postgresql://localhost:5432/projeto_angular_spring
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.username=postgres
+spring.datasource.password=thawan
+spring.jpa.show-sql=true
+
+##verifique se tem instalado o bootstrap
+e minha api esta na http://localhost:4200/
+
+![tela do inicio e do filtro (2)](https://github.com/thawankadson/TesteEsig/assets/107351264/9e622f86-da87-447d-b66e-a46f65b27e2d)
+![tela do inicio e do filtro (1)](https://github.com/thawankadson/TesteEsig/assets/107351264/8b6aec4c-df4b-4353-bd59-0964d9b92b8b)
+
 # ApiFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
